@@ -1,0 +1,28 @@
+{
+  "posts": [
+    {
+      "firstName": "tiwari",
+      "Lastname": "sdsd",
+      "email": "dsdsd@dsdjs.com",
+      "phoneNumber": 9620445482,
+      "status": "active",
+      "id": 1
+    },
+    {
+      "firstName": "dsvhvh",
+      "Lastname": "vhvchv",
+      "email": "jhasbcj@jhbasjc.com",
+      "phoneNumber": 1234567890,
+      "status": "active",
+      "id": 2
+    },
+    {
+      "firstName": "",
+      "Lastname": "",
+      "email": "",
+      "phoneNumber": "",
+      "status": "",
+      "id": 3
+    }
+  ]
+}

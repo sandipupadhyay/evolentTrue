@@ -1,0 +1,72 @@
+
+<div class="container signUp">
+    <form *ngIf="!success" [formGroup]="signupForm" (ngSubmit)="onSubmit(signupForm ,f)">
+        <div class="form-group">
+            <label>Name</label>
+            <input type="text" formControlName="fname" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.fname.errors }" />
+            <div *ngIf="submitted && f.fname.errors" class="invalid-feedback">
+                <div *ngIf="f.fname.errors.required">Name is required</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" formControlName="lname" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lname.errors }" />
+            <div *ngIf="submitted && f.lname.errors" class="invalid-feedback">
+                <div *ngIf="f.lname.errors.required">Last name is required</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Mobile Number</label>
+            <input type="number" formControlName="number" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.number.errors }"
+            />
+            <div *ngIf="submitted && f.number.errors" class="invalid-feedback">
+                <div *ngIf="f.number.errors.required">Mobile Number is required</div>
+                <div *ngIf="f.number.errors.pattern">Enter valid Mobile Number</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Email</label>
+            <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }"
+            />
+            <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                <div *ngIf="f.email.errors.required">Email is required</div>
+                <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Status</label>
+            
+                <input type="radio" value="active" name="status" formControlName="status">
+                Active
+                <input type="radio" value="inactive" name="status" formControlName="status">     
+                Inactive
+         
+          </div>
+        <div class="form-group">
+            <button class="btn btn-primary" type="submit">Register</button>
+
+        </div>
+    </form>
+</div>
+<div style="text-align: center;margin-top: 25px;" *ngIf="success">
+    <table>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th> Phone</th>
+        <th>Status</th>
+        <tr *ngFor="let data of formData">
+            <td>{{data.firstName}}</td>
+            <td>{{data.Lastname}}</td>
+            <td>{{data.email}}</td>
+            <td>{{data.status}}</td>
+            <td>{{data.phoneNumber}}</td>
+            <td>
+                <span>
+                    <button (click)="deleteData(data.id)">Delete</button>
+                    <button (click)="editData(data.id)">Edit</button>
+                </span>
+            </td>
+        </tr>
+    </table>
+</div>
