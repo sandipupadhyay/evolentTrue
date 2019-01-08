@@ -2,11 +2,12 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.3.
 
-## Development server
+## Development server setup first clone/download the project then run these series of command
 Go to Project folder and then run the following set of commands - 
 1. Run npm install
-2. Run npm install bootstrap --save
-3. Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+2. npm i rxjs-compat
+3. Run npm install bootstrap --save
+4. Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Json Server
 Used Json server to store values in db file named db.json in root directory , 
