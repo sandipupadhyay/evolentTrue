@@ -18,7 +18,6 @@ db.json is name of json file in src root
 url to check db.json: http://localhost:5555/posts/
 
 ## Build
-
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
 
